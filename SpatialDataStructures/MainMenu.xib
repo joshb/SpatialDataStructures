@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Spatial_Data_Structures" customModuleProvider="target">
+            <connections>
+                <outlet property="dynamicDataStructurePopUpButton" destination="SFS-C6-bF0" id="Fdq-vh-Zyk"/>
+                <outlet property="fpsLabel" destination="lvy-a7-BM9" id="pJt-f2-f2l"/>
+                <outlet property="numberOfObjectsPopUpButton" destination="Iy0-e6-9Ff" id="jB9-ib-SfR"/>
+                <outlet property="staticDataStructurePopUpButton" destination="4Cw-gE-Sot" id="W9n-d8-Ol0"/>
+                <outlet property="view" destination="PFn-td-iLH" id="yen-qs-m6Y"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+            <items>
+                <menuItem title="Spatial Data Structures" id="1Xt-HY-uBw">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Spatial Data Structures" systemMenu="apple" id="uQy-DD-JDr">
+                        <items>
+                            <menuItem title="About Spatial Data Structures" id="5kV-Vb-QxS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-1" id="Exp-CZ-Vem"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                            <menuItem title="Services" id="NMo-om-nkz">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                            <menuItem title="Hide Spatial Data Structures" keyEquivalent="h" id="Olw-nP-bQN">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="PnN-Uc-m68"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="VT4-aY-XCT"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="Kd2-mp-pUS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="Dhg-Le-xox"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                            <menuItem title="Quit Spatial Data Structures" keyEquivalent="q" id="4sb-4s-VLi">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="File" id="hry-oV-V93">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="File" id="W51-8e-4eU">
+                        <items>
+                            <menuItem title="Close" keyEquivalent="w" id="F0x-hv-sXv">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="KYj-WR-HFV"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="b7i-M7-mfb"/>
+                            <menuItem title="Export Statistics" id="WRy-oG-iHM">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="exportStatistics:" target="Voe-Tx-rLC" id="zmc-bf-TwW"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="View" id="H8h-7b-M4v">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="View" id="HyV-fh-RgO">
+                        <items>
+                            <menuItem title="Enter Full Screen" keyEquivalent="f" id="sZ1-F5-qrG">
+                                <modifierMask key="keyEquivalentModifierMask" control="YES" command="YES"/>
+                                <connections>
+                                    <action selector="toggleFullScreen:" target="-1" id="G5e-uH-gmE"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="aUF-d1-5bR">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="VwT-WD-YPe"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="DIl-cC-cCs"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                            <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="DRN-fu-gQh"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="wpr-3q-Mcd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="Spatial Data Structures" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <rect key="contentRect" x="40" y="302" width="591" height="448"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <value key="minSize" type="size" width="480" height="360"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="591" height="448"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <openGLView useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PFn-td-iLH" customClass="MyNSOpenGLView" customModule="Spatial_Data_Structures" customModuleProvider="target">
+                        <rect key="frame" x="20" y="57" width="551" height="268"/>
+                    </openGLView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="97K-zw-ceH">
+                        <rect key="frame" x="18" y="409" width="193" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="189" id="6Iu-C7-TYT"/>
+                        </constraints>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Static Object Data Structure:" id="w85-z4-v4g">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zN4-xZ-IRP">
+                        <rect key="frame" x="18" y="378" width="188" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Moving Object Data Structure:" id="jDV-4z-PBG">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4Cw-gE-Sot">
+                        <rect key="frame" x="210" y="404" width="364" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="BSP Tree" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="wkP-Wc-aBD" id="Yp6-xQ-T7b">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="8aY-D5-UQT">
+                                <items>
+                                    <menuItem title="BSP Tree" state="on" id="wkP-Wc-aBD"/>
+                                    <menuItem title="Item 2" id="9t8-gC-cF7"/>
+                                    <menuItem title="Item 3" id="t9s-IZ-ue6"/>
+                                </items>
+                            </menu>
+                            <connections>
+                                <action selector="dataStructureChanged:" target="Voe-Tx-rLC" id="qr1-o0-HVd"/>
+                            </connections>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="SFS-C6-bF0">
+                        <rect key="frame" x="210" y="373" width="364" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="Octree" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="inP-Xs-Bgq" id="MEn-oM-5If">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="C5W-Eo-dpU">
+                                <items>
+                                    <menuItem title="Octree" state="on" id="inP-Xs-Bgq"/>
+                                    <menuItem title="Item 2" id="U5v-ZB-HQR"/>
+                                    <menuItem title="Item 3" id="KF6-fs-mQe"/>
+                                </items>
+                            </menu>
+                            <connections>
+                                <action selector="dataStructureChanged:" target="Voe-Tx-rLC" id="s0d-Jz-LVD"/>
+                            </connections>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="v3B-Hn-2ev">
+                        <rect key="frame" x="18" y="18" width="107" height="18"/>
+                        <buttonCell key="cell" type="check" title="Render Scene" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="NDk-0I-yh9">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="renderSceneChanged:" target="Voe-Tx-rLC" id="hfE-YY-GLE"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="VTJ-Mk-0bQ">
+                        <rect key="frame" x="129" y="18" width="103" height="18"/>
+                        <buttonCell key="cell" type="check" title="Render Trees" bezelStyle="regularSquare" imagePosition="left" inset="2" id="GnR-CS-lVF">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="renderTreesChanged:" target="Voe-Tx-rLC" id="uVb-sU-ATC"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iy0-e6-9Ff">
+                        <rect key="frame" x="210" y="342" width="364" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="100" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Zpp-Gj-uPl" id="8JX-WO-4xM">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="oV4-ah-sxr">
+                                <items>
+                                    <menuItem title="100" state="on" id="Zpp-Gj-uPl"/>
+                                    <menuItem title="Item 2" id="3Zy-pu-xty"/>
+                                    <menuItem title="Item 3" id="ON4-Yn-DO9"/>
+                                </items>
+                            </menu>
+                            <connections>
+                                <action selector="dataStructureChanged:" target="Voe-Tx-rLC" id="KWg-CC-1vx"/>
+                            </connections>
+                        </popUpButtonCell>
+                    </popUpButton>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j4R-YC-htg">
+                        <rect key="frame" x="18" y="347" width="123" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Number of Objects:" id="vrE-IQ-hLO">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button translatesAutoresizingMaskIntoConstraints="NO" id="hIU-fb-85w">
+                        <rect key="frame" x="236" y="18" width="136" height="18"/>
+                        <buttonCell key="cell" type="check" title="Collision Detection" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="OG0-Jy-lNC">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <connections>
+                                <action selector="collisionDetectionChanged:" target="Voe-Tx-rLC" id="BAU-Ug-vDn"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lvy-a7-BM9">
+                        <rect key="frame" x="488" y="20" width="85" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ms per frame" id="sj6-Jv-lev">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="j4R-YC-htg" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="0hv-xL-uOD"/>
+                    <constraint firstItem="Iy0-e6-9Ff" firstAttribute="centerY" secondItem="j4R-YC-htg" secondAttribute="centerY" id="2x5-IL-TYx"/>
+                    <constraint firstItem="PFn-td-iLH" firstAttribute="top" secondItem="Iy0-e6-9Ff" secondAttribute="bottom" constant="20" id="5xx-Nc-pMr"/>
+                    <constraint firstItem="4Cw-gE-Sot" firstAttribute="centerY" secondItem="97K-zw-ceH" secondAttribute="centerY" id="6wq-TO-Wxo"/>
+                    <constraint firstItem="Iy0-e6-9Ff" firstAttribute="top" secondItem="SFS-C6-bF0" secondAttribute="bottom" constant="10" id="7YD-vI-PVO"/>
+                    <constraint firstAttribute="bottom" secondItem="v3B-Hn-2ev" secondAttribute="bottom" constant="20" id="DTo-if-fNg"/>
+                    <constraint firstAttribute="trailing" secondItem="4Cw-gE-Sot" secondAttribute="trailing" constant="20" id="DYH-Gp-9BU"/>
+                    <constraint firstAttribute="bottom" secondItem="hIU-fb-85w" secondAttribute="bottom" constant="20" id="ExJ-nm-Hx1"/>
+                    <constraint firstItem="Iy0-e6-9Ff" firstAttribute="leading" secondItem="SFS-C6-bF0" secondAttribute="leading" id="FPw-0x-RSd"/>
+                    <constraint firstItem="97K-zw-ceH" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="Hkn-Xw-8Iy"/>
+                    <constraint firstAttribute="bottom" secondItem="lvy-a7-BM9" secondAttribute="bottom" constant="20" id="Ioz-Ou-lc6"/>
+                    <constraint firstItem="SFS-C6-bF0" firstAttribute="top" secondItem="4Cw-gE-Sot" secondAttribute="bottom" constant="10" id="Lmq-Pm-1yU"/>
+                    <constraint firstAttribute="trailing" secondItem="PFn-td-iLH" secondAttribute="trailing" constant="20" id="N17-PJ-03q"/>
+                    <constraint firstItem="PFn-td-iLH" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="NUY-PN-25a"/>
+                    <constraint firstAttribute="trailing" secondItem="SFS-C6-bF0" secondAttribute="trailing" constant="20" id="Nha-YS-ObG"/>
+                    <constraint firstItem="VTJ-Mk-0bQ" firstAttribute="leading" secondItem="v3B-Hn-2ev" secondAttribute="trailing" constant="8" id="P1p-EA-ljQ"/>
+                    <constraint firstAttribute="trailing" secondItem="Iy0-e6-9Ff" secondAttribute="trailing" constant="20" id="R2I-sA-uMa"/>
+                    <constraint firstItem="lvy-a7-BM9" firstAttribute="top" secondItem="PFn-td-iLH" secondAttribute="bottom" constant="20" id="aWd-eH-7CS"/>
+                    <constraint firstItem="4Cw-gE-Sot" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" id="f1u-MR-UB9"/>
+                    <constraint firstItem="SFS-C6-bF0" firstAttribute="leading" secondItem="zN4-xZ-IRP" secondAttribute="trailing" constant="8" id="fa0-vb-ixF"/>
+                    <constraint firstItem="SFS-C6-bF0" firstAttribute="centerY" secondItem="zN4-xZ-IRP" secondAttribute="centerY" id="gfC-Su-NRL"/>
+                    <constraint firstItem="v3B-Hn-2ev" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="kCO-N0-gdA"/>
+                    <constraint firstItem="SFS-C6-bF0" firstAttribute="leading" secondItem="4Cw-gE-Sot" secondAttribute="leading" id="rT3-DH-2gK"/>
+                    <constraint firstAttribute="trailing" secondItem="lvy-a7-BM9" secondAttribute="trailing" constant="20" id="sYV-qk-z8l"/>
+                    <constraint firstItem="zN4-xZ-IRP" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" id="sdI-3e-3LA"/>
+                    <constraint firstAttribute="bottom" secondItem="VTJ-Mk-0bQ" secondAttribute="bottom" constant="20" id="w5d-m7-hMx"/>
+                    <constraint firstItem="hIU-fb-85w" firstAttribute="leading" secondItem="VTJ-Mk-0bQ" secondAttribute="trailing" constant="8" id="yUx-6p-3nw"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="464.5" y="411"/>
+        </window>
+    </objects>
+</document>
